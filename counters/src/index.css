@@ -5,9 +5,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  
 }
 
+.title {
+  font-size: 100px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.step {
+  display:flex;
+  flex-direction: column;
+  margin: 0px;
+  text-align: center;
+}
+.box {
+  display:flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+.box h1 {
+  font-weight: lighter;
+  
+}
+
+.box button {
+  width: 30px;
+  height: 30px;
+  vertical-align: center;
+  margin: auto;
+  margin-left: 1%;
+  margin-right: 01%;
+  border: solid 2px brown;
+}
+
