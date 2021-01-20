@@ -5,7 +5,12 @@ import "./index.css";
 const Counter = (props) => {
   const [counter, setCounter] = useState(0) ; // muutuja ja muutuja “setter”
   const updateCounter = () => { 
+    if (counter <0){
+      console.log("Limit reached")
     
+  } else {
+    setCounter(counter - props.step)
+  }
    } // funktsioon
   return ( 
 
@@ -13,9 +18,9 @@ const Counter = (props) => {
     <div class ="step">
       <h1>step: {props.step}</h1>
       <div class= "box">
-        <button  onClick={() => setCounter(counter - props.step)}>-</button>
+        <button  onClick={() => updateCounter("-")}>-</button>
         <h1> {counter} </h1>
-      <button  onClick={() => setCounter(counter + props.step)}>+</button>
+      <button  onClick={() => updateCounter("+")}>+</button>
       </div>
       
     </div>
